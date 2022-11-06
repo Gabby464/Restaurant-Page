@@ -6,4 +6,4 @@ import {
 } from './homePage';
 import background from './bg.jpg';
 const bodyContainer = renderTopPage(background);
-createHomePage(bodyContainer)
+createHomePage(bodyContainer);
