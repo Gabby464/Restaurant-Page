@@ -1,3 +1,9 @@
-import {renderTopPage} from './topPage';
+import {
+    renderTopPage
+} from './topPage';
+import {
+    createHomePage
+} from './homePage';
 import background from './bg.jpg';
-renderTopPage()
+const bodyContainer = renderTopPage(background);
+createHomePage(bodyContainer)

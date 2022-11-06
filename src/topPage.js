@@ -1,4 +1,5 @@
 import './style.css';
+import image from './bg.jpg'
 export const renderTopPage = () => {
     //get content el
     const contentElement = document.querySelector('.content');
@@ -34,13 +35,20 @@ export const renderTopPage = () => {
     const getBackground = () => {
         const backgroundDiv = document.createElement('div');
         backgroundDiv.classList.add('background');
-        backgroundDiv.style.background = '/bg.jpg'
-
+        contentElement.appendChild(backgroundDiv);
+        const myIcon = new Image();
+        myIcon.src = image;
+        backgroundDiv.appendChild(myIcon);
     }
 
+ 
+        getBackground()
         createHeader();
         createNav();
-    
+        const bodyContainer = document.createElement('div');
+        bodyContainer.classList.add('body-container')
+        contentElement.appendChild(bodyContainer);
 
+    return(bodyContainer);
 };
 
