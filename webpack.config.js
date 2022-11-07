@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[name][ext][query]'
   },
   mode: 'development',
   devtool: false,
@@ -17,6 +18,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        
       },
      {
        test: /\.(woff|woff2|eot|ttf|otf)$/i,
