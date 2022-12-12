@@ -40,8 +40,6 @@ export const renderTopPage = () => {
         myIcon.src = image;
         backgroundDiv.appendChild(myIcon);
     }
-
- 
         getBackground()
         createHeader();
         createNav();
