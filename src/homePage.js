@@ -14,6 +14,7 @@ export const createHomePage = (bodyContainer) => {
     header3.textContent = 'Book a table to experience "The Experience" of Scazz';
     const reservationButton = document.createElement('button');
     reservationButton.innerHTML = "Reserve";
+    reservationButton.className = "reservation"
     reservationEl.appendChild(reservationButton);
 
     
