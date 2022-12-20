@@ -4,19 +4,24 @@ export const renderTopPage = () => {
     //get content el
     const contentElement = document.querySelector('.content');
     const createHeader = () => {
+
+
         const headerDiv = document.createElement('div');
         headerDiv.className = 'header';
         const headerEl = document.createElement('h1');
         headerEl.textContent = 'Scazz';
+        headerEl.className = "cursive"
         headerDiv.appendChild(headerEl);
         const headerTwoEl = document.createElement('h2');
-        headerTwoEl.textContent = 'An Experience...';
+        headerTwoEl.textContent = 'An experience...';
         headerDiv.appendChild(headerTwoEl);
         contentElement.appendChild(headerDiv);
+
     }
     //create nav
     const createNav = () => {
         const navEl = document.createElement('nav');
+        navEl.className = 'nav-bar'
         const createButton = (id, content) => {
             const btn = document.createElement('button');
             btn.className = 'navButtons'
@@ -32,15 +37,7 @@ export const renderTopPage = () => {
         contentElement.appendChild(navEl)
     }
 
-    const getBackground = () => {
-        const backgroundDiv = document.createElement('div');
-        backgroundDiv.classList.add('background');
-        contentElement.appendChild(backgroundDiv);
-        const myIcon = new Image();
-        myIcon.src = image;
-        backgroundDiv.appendChild(myIcon);
-    }
-        getBackground()
+   
         createHeader();
         createNav();
         const bodyContainer = document.createElement('div');
