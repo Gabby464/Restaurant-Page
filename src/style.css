@@ -76,6 +76,7 @@
   font-family: 'Dancing Script';
   font-size: x-large;
   border: none;
+  cursor: pointer;
 }
 
 .navButtons:focus{
@@ -208,7 +209,40 @@ hr{
 .gallery-container>img{
   width: 80%;
 }
-
+.map{
+  width: 100%;
+  height: calc(30vh + 50px);
+}
+.map>iframe{
+  width: 100%;
+  height: calc(30vh + 50px);
+}
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+.info-tab>*{
+  text-align: center;
+}
+.info-tab>h1{
+  color:  black;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.info-tab{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.info-tab>p{
+  color: #292929;
+  font-size: 19px;
+}
   @media only screen and (max-width: 600px) {
     .menu-container {
       flex-direction: column;
