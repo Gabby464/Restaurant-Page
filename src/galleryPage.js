@@ -1,9 +1,6 @@
 //with the help ofhttps://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
     const createGalleryElements = (bodyContainer) => {
     bodyContainer.innerHTML = '';
-    const mainContainer = document.createElement('div');
-    mainContainer.className = 'main-gallery'
-    bodyContainer.appendChild(mainContainer);
     const prevButton = document.createElement('prev');
     prevButton.className = 'prev'
     prevButton.innerHTML ='&#10094;';
@@ -12,7 +9,7 @@
     nextButton.className = 'next'
     nextButton.innerHTML ='&#10095;';
     nextButton.addEventListener('click', function() {plusSlides(-1)}); 
-    mainContainer.append(prevButton, nextButton);
+    bodyContainer.append(prevButton, nextButton);
 }
     function createSlides(path, bodyContainer) {
   const galeryContainer = document.createElement('div');
@@ -20,7 +17,6 @@
   const imageEl = document.createElement('img');
   galeryContainer.appendChild(imageEl);
   imageEl.src = path;
-  imageEl.style = 'width:100%';
   bodyContainer.appendChild(galeryContainer);
 }
     let slideIndex = 1;
@@ -38,6 +34,6 @@
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      slides[slideIndex-1].style.display = "block";
+      slides[slideIndex-1].style.display = "flex";
 }
 export {createGalleryElements, createSlides, showSlides, loadslides, plusSlides, slideIndex}

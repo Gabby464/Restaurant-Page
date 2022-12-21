@@ -156,17 +156,17 @@ hr{
 
 /* style the gallery */
 
-.main-gallery{
-    position: relative;
-  }
-.galeryContainer {
-    display: none;
+
+.body-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
   }
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -185,6 +185,29 @@ hr{
     right: 0;
     border-radius: 3px 0 0 3px;
   }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.gallery-container{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-container>img{
+  width: 80%;
+}
 
   @media only screen and (max-width: 600px) {
     .menu-container {
