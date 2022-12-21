@@ -7,7 +7,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[name][ext][query]'
   },
-  mode: 'development',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  mode: 'production',
   devtool: false,
   module: {
     rules: [
